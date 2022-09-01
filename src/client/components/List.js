@@ -1,11 +1,11 @@
 import { styled } from "../utils/styled.js";
 import { useState } from "../utils/useState.js";
 
-const li = styled("li")`
+const Li = styled("li")`
   color: red;
   height: 100px;
 `;
-const button = styled("button")`
+const Btn = styled("button")`
   background-color: #333;
   color: #fff;
   cursor: pointer;
@@ -19,8 +19,8 @@ const List = () => {
 
   return `
     <ul>
-      ${numbers.map((item) => li(item)).join("")}
-      ${button("버튼", { id: "add", onclick: "setNumbers()" })}
+      ${numbers.map((item) => Li(item)).join("")}
+      ${Btn("버튼", { id: "add", onclick: "setNumbers()" })}
     </ul>
   `;
 };
