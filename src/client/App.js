@@ -1,12 +1,12 @@
+import Header from "./components/Header.js";
 import List from "./components/List.js";
 
 const App = () => {
   return `
+   ${Header()}
    ${List()}
   `;
 };
-
-const app = document.getElementById("app");
-app.innerHTML = App();
+document.getElementById("app").innerHTML = App();
 
 export default App;

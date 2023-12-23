@@ -7,8 +7,6 @@ export const styled = (tag) => {
       el.style = styles;
       if (attribute) {
         for (const [key, value] of Object.entries(attribute)) {
-          console.log(key);
-          console.log(value);
           el.setAttribute(key, value);
         }
       }

@@ -1,5 +1,5 @@
-import { styled } from "../utils/styled.js";
-import { useState } from "../utils/useState.js";
+import { styled } from "../zzooAct/styled.js";
+import zzooAct from "../zzooAct/zzooAct.js";
 
 const Li = styled("li")`
   color: red;
@@ -12,11 +12,9 @@ const Btn = styled("button")`
 `;
 
 const List = () => {
-  const [numbers, setNumbers] = useState([1, 2, 3]);
+  const [numbers, setNumbers] = zzooAct.useState([1, 2, 3]);
 
-  window.setNumbers = () => setNumbers([...numbers, numbers.length + 1]);
-  console.log("in component", numbers);
-
+  window.setNumbers = () => setNumbers((prev) => [...prev, prev.length + 1]);
   return `
     <ul>
       ${numbers.map((item) => Li(item)).join("")}
