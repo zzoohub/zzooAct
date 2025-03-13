@@ -9,9 +9,7 @@ const HeaderTag = styled('header')`
 `
 
 const Header = () => {
-  return `
-      ${HeaderTag('헤더')}      
-    `
+  return `${HeaderTag('헤더')}`
 }
 
 export default Header
